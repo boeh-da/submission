@@ -2,7 +2,7 @@
 # Imports helper functions
 from kaggle_environments.envs.halite.helpers import *
 
-BOTNAME = "default_0"
+BOTNAME = "default"
 # Returns best direction to move from one position (fromPos) to another (toPos)
 # Example: If I'm at pos 0 and want to get to pos 55, which direction should I choose?
 def getDirTo(fromPos, toPos, size):
