@@ -33,3 +33,5 @@ Geben Sie ein: ```git: clone``` + eingabe der URL
 Erstellen Sie einen Ordner in Ihrem Laufwerk.
 
 Melden Sie sich nun innerhalb VS Code mit ihrem GitHub Account an.
+
+Weitere Infos zu dem im Code verwendeten SDK finden Sie unter: https://www.kaggle.com/code/sam/halite-sdk-overview/notebook
