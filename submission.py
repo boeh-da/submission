@@ -58,7 +58,7 @@ def attackShip(ship, other_ships, size, other_shipyards, step):
         if step > 300: 
             return attackShipyard(ship,other_shipyards, size )
         else: 
-            return random.choice([ShipAction.NORTH, None, ShipAction.EAST])
+            return random.choice([ShipAction.NORTH, None, ShipAction.EAST, None, None])
 
 def newPosition (old_position, next_step):
     x, y = old_position
@@ -136,7 +136,7 @@ def agent(obs, config):
             
             if enemy_near(ship, other_ships): 
                 ship_states[ship.id] = "RUNAWAY"
-            elif ship.halite > 1:
+            elif ship.halite > 100:
                 ship_states[ship.id] = "DEPOSIT"
             else: 
                 ship_states[ship.id] = "ATTACK"
