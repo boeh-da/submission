@@ -86,7 +86,8 @@ def enemy_near(ship, positions):
     sx, sy = ship.position
     for pos, halite in positions:
         if (sx-1<=pos[0]<=sx+1) and (sy-1<=pos[1]<=sy+1):
-            return True
+            if halite < ship.halite:
+                return True
     else:
         False
 
@@ -133,7 +134,7 @@ def agent(obs, config):
     for ship in me.ships:
         if ship.next_action == None:
             
-            if enemy_near(ship, other_ships) and ship.halite > 0: 
+            if enemy_near(ship, other_ships): 
                 ship_states[ship.id] = "RUNAWAY"
             elif ship.halite > 1:
                 ship_states[ship.id] = "DEPOSIT"
